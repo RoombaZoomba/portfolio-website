@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -73,8 +73,6 @@ const Work = () => {
                 className="app__work-hover app__flex"
               >
                 {/*
-                  Link to work, should be an eye icon( AiFillEye)
-                */}
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
 
                   <motion.div
@@ -86,6 +84,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
+                */}
                 {/*
                   Link to code( AiFillGithub)
                 */}
