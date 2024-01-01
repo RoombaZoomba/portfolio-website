@@ -48,7 +48,7 @@ const Skills = () => {
         <div className="app__skills-exp">
           {experiences
           .slice()
-          .sort((a, b) => a.year - b.year)
+          .sort((a, b) => b.year - a.year)
           .map((experience) => (
             <motion.div
               className="app__skills-exp-item"
