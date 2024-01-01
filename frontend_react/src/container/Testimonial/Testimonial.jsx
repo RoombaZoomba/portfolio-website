@@ -18,6 +18,7 @@ const Testimonial = () => {
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
     const brandsQuery = '*[_type == "brands"]';
+    
 
     client.fetch(query).then((data) => {
       setTestimonials(data);
@@ -26,14 +27,15 @@ const Testimonial = () => {
     client.fetch(brandsQuery).then((data) => {
       setBrands(data);
     });
-  }, []);
+  }, [currentIndex]);
 
   return (
     <>
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
-            <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
+            <img src={urlFor(testimonials[currentIndex].imageurl)} alt={testimonials[currentIndex].name} />
+          
             <div className="app__testimonial-content">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
               <div>
